@@ -55,4 +55,4 @@ private:
 	void changeOtherSets(State) ;
 };
 
-std::ofstream operator<<(std::ofstream&, Character&);
+std::ostream& operator<<(std::ostream&, const Character&);

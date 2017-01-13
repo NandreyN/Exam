@@ -145,5 +145,13 @@ void Character::changeOtherSets(State s)
 		_canMove = false;
 		_canSpeak = false;
 		break;
+	default: break;
 	}
+}
+
+std::ostream& operator<<(std::ostream& o, const Character& person)
+{
+	o << Essence::getStringRace(person.getRace()).c_str() << " " << Essence::getStringSex(person.getSex()).c_str() << " HP: " << person.getCurrentHealth()
+		<< "/" << person.getMaxHealth() << "XP: "<< person.getXP() << std::endl;
+	return o;
 }
