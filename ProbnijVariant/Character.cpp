@@ -1,7 +1,7 @@
 #include "Character.h"
 #include <iostream>
 
-static int _totalCount;
+int Character::_totalCount = 0;
 
 Character::Character(Sex sex, Race race, unsigned int maxHealth) :_maxValue(maxHealth), _sex(sex), _race(race), _id(_totalCount++)
 {

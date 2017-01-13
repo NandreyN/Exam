@@ -37,6 +37,7 @@ public:
 
 	bool static compareByXP(const Character&, const Character&); 
 private:
+	static int _totalCount;
 	unsigned const int _maxValue;
 	const Race _race;
 	const Sex _sex;
@@ -54,5 +55,5 @@ private:
 	void changeState(State) ;
 	void changeOtherSets(State) ;
 };
-
 std::ostream& operator<<(std::ostream&, const Character&);
+
